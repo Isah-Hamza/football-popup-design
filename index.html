@@ -24,7 +24,6 @@
                 Design 2
             </button>
         </div>
-
         <!-- First Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -34,7 +33,7 @@
                     <div class="modal-content-bg-color position-absolute"></div>
                     <button style="z-index: 1;filter: invert(1);" type="button"
                         class="btn-close position-absolute end-0" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="modal-body">
+                    <div class="modal-body rounded">
                         <div class="h-100 d-flex flex-column text-white">
                             <p class="text-light fs-3 text-center fw-bold mt-4">Match Schedule</p>
                             <div class="flex-grow-1 d-flex flex-column mt-5 mb-4 pt-3">
@@ -71,29 +70,53 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Second Modal -->
-    <div class="modal fade " id="staticBackdrop-two" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Second Modal content goes here
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+        <!-- Second Modal -->
+        <div class="modal modal2 fade " id="staticBackdrop-two" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content position-relative">
+                    <div class="modal-content-bg position-absolute"></div>
+                    <div class="modal-content-bg-color position-absolute"></div>
+                    <button
+                        style="z-index: 1;filter: invert(20%) sepia(95%) saturate(6621%) hue-rotate(357deg) brightness(109%) contrast(115%)"
+                        type="button" class="btn-close position-absolute end-0" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    <div class="modal-body rounded">
+                        <div class="h-100 d-flex flex-column justify-content-end text-white">
+                            <p class="text-light fs-3 text-center fw-bold mt-4">Today Match Schedule</p>
+                            <div class="d-flex flex-column justify-content-end mb-2 pt-3">
+                                <p class="fs-6 fw-bold text-center fst-italics">[ 12-08-2020 17:30 ]</p>
+                                <div style="max-height: 160px; width: fit-content; background:hsla(16, 100%, 66%, .8)"
+                                    class="d-flex gap-4 align-items-center mx-auto px-4 py-2 rounded">
+                                    <p class="mb-0 fw-bolder fs-6">ARSENAL FC</p>
+                                    <img width="25px" src="./images/versus-icon.webp" alt="versus">
+                                    <p class="mb-0 fw-bolder fs-6">CHELSEA FC</p>
+                                </div>
+                                <div style="width: fit-content;"
+                                    class="bg-white px-4 rounded-bottom mb-4 d-flex gap-5 align-items-center mx-auto fs-3 text-white fw-bolder">
+                                    <p class="mb-0 text-success">3</p>
+                                    <span class="d-block text-black mb-2"> - </span>
+                                    <P class="mb-0 text-success">3</P>
+                                </div>
+                                <div style="width: fit-content; margin-bottom: 20px;"
+                                    class="fs-6 probability d-flex gap-2 align-items-center mx-auto fw-bold text-center bg-dark px-4 rounded-2">
+                                    <p class=" mb-0 text-center">Odd</p>
+                                    <span> - </span>
+                                    <span class="text-white">0.45%</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 w-100 justify-content-center">
+                                    <img style="width: 20px;" src="./images/icons8-soccer-ball-48.png" alt="ball">
+                                    <p class="mb-0 fw-bold fs-5">FA CUP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    </div>
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
@@ -117,7 +140,6 @@
         .probability {
             background: hsla(16, 100%, 66%, .8) !important;
             padding: 10px 25px !important;
-
         }
 
         .modal-dialog {
@@ -158,6 +180,26 @@
                 height: 100%;
                 border-radius: 0;
             }
+        }
+
+        /* Second modal specific styles */
+        .modal2 .modal-content-bg {
+            background: url('./images/image1.jpg'), ;
+        }
+
+        .modal2 .modal-content-bg-color {
+            opacity: 0.93;
+            background-image: linear-gradient(0deg,
+                    hsl(240deg 100% 3%) 17%,
+                    hsl(238deg 10% 13%) 56%,
+                    hsl(239deg 6% 22%) 68%,
+                    hsl(239deg 4% 32%) 74%,
+                    hsl(239deg 2% 42%) 78%,
+                    hsl(240deg 2% 53%) 81%,
+                    hsl(240deg 2% 64%) 83%,
+                    hsl(240deg 2% 76%) 86%,
+                    hsl(240deg 2% 88%) 90%,
+                    hsl(0deg 0% 100%) 100%)
         }
     </style>
 </body>
